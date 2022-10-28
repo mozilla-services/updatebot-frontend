@@ -1,0 +1,9 @@
+$image-path: '../../img';
+$font-path: '../../fonts';
+@import '~@mozilla-protocol/core/protocol/css/protocol.css';
+@import '~@mozilla-protocol/core/protocol/css/components/navigation';
+@import '~@mozilla-protocol/core/protocol/css/includes/lib';
+
+body {
+  margin: 0;
+}
