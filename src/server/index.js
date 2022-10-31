@@ -4,8 +4,9 @@
 
 const express = require("express");
 const app = express();
+const router = express.Router()
 const port = 3000;
-const jobsRouter = require("./jobs")
+const routes = require("./routes")
 
 // use express' built in JSON parser
 app.use(express.json());
@@ -14,7 +15,12 @@ app.use(express.json());
 // use express' built in JSON parser to read strings that are urlencoded
 app.use(express.urlencoded({ extended: true }));
 
-app.use("/", jobsRouter);
+router.route("/").get(routes.getAllLibraries);
+router.route("/jobs").get(routes.getAllJobs);
+router.route("/jobs:id").get(routes.getJob);
+
+app.use("/", router);
+
 
 
 
