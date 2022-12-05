@@ -2,6 +2,8 @@
 // License, v. 2.0. If a copy of the MPL was not distributed with this
 // file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
+import { Link } from "react-router-dom";
+
 const Navigation = () => {
     return (
         <nav className="mzp-c-navigation">
@@ -20,7 +22,7 @@ const Navigation = () => {
                             <nav className="mzp-c-menu mzp-is-basic">
                                 <ul className="mzp-c-menu-category-list">
                                     <li className="mzp-c-menu-category">
-                                        <a className="mzp-c-menu-title" href="/">Library Home Link</a>
+                                        <Link to={`/`} className="mzp-c-menu-title">Library Home Link</Link>
                                     </li>
                                 </ul>
                             </nav>
